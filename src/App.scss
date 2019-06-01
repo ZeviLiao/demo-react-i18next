@@ -17,6 +17,11 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  button.larger {
+    font-size: 2rem;
+    padding: 10px 30px;
+    border-radius: 10px;
+  }
 }
 
 .App-link {

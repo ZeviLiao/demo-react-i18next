@@ -3,6 +3,31 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import i18n from "i18next";
+import { useTranslation, initReactI18next } from "react-i18next";
+
+import zh_TW from './i18n/zh-TW';
+import en_US from './i18n/en-US';
+
+
+i18n.use(initReactI18next) // passes i18n down to react-i18next
+    .init({
+        resources: {
+            en: {
+                translation: en_US
+            },
+            zh:  {
+                translation: zh_TW
+            }
+        },
+        lng: "zh",
+        fallbackLng: "en",
+
+        interpolation: {
+            escapeValue: false
+        }
+    });
+
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
