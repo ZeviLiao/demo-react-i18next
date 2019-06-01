@@ -32,10 +32,11 @@ function Page() {
   return (
     <div className="App">
       <div className="App-header">
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <Welcome />
         <div>
-          <button className="larger" onClick={() => changeLanguage('zh')}>zh</button> &nbsp;&nbsp;
-        <button className="larger" onClick={() => changeLanguage('en')}>en</button>
+          <button onClick={() => changeLanguage('zh')}>zh</button> &nbsp; &nbsp;
+          <button onClick={() => changeLanguage('en')}>en</button>
         </div>
 
       </div>
@@ -50,6 +51,7 @@ function Page() {
 // loading component for suspense fallback
 const Loader = () => (
   <div className="App">
+    {/* <img src={logo} className="App-logo" alt="logo" /> */}
     <div>loading...</div>
   </div>
 );
