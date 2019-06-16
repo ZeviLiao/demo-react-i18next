@@ -7,7 +7,12 @@ import './App.scss';
 class LegacyWelcomeClass extends Component {
   render() {
     const { t, i18n } = this.props;
-    return <h2>{t('hello')}</h2>;
+    return (
+    <div>
+      <h2>{t('hello')}</h2>
+      <h2>{t('superHello',{ someone: 'zz' })}</h2>
+    </div>
+    ) ;
   }
 }
 const Welcome = withTranslation()(LegacyWelcomeClass);
